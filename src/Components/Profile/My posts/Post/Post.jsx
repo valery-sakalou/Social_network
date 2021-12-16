@@ -1,13 +1,13 @@
 import s from './Post.module.css';
 
-const Post = () =>{
+const Post = (props) =>{
   return (
   <div>  
     <div className={s.item}>
       <img src="https://www.pinclipart.com/picdir/middle/49-490443_avatar-icon-tlcharger-avatar-icon-clipart.png" />
-      Post1
+      {props.message}
       <div>
-        <span>Like</span>
+        <span>{props.like}</span>
       </div>
     </div>
   </div>
