@@ -11,10 +11,10 @@ const App =(props)=> {
         <div className='app-wrapper'>
               <Header />
               <NavBar />
-         <div class='app-wrapper-content'>
+         <div className='app-wrapper-content'>
              <Routes>
-                 <Route path="/dialog" element= {<Dialogs/>}/>
-                 <Route path="/profile" element={<Profile/>}/>
+                 <Route path='/profile' element={<Profile/>}/>
+                 <Route path='/dialog' element={<Dialogs/>}/>
              </Routes>
          </div>
         </div>
