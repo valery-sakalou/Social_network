@@ -8,6 +8,6 @@
   text-decoration: none;
 }
 
-.item a.active {
+.item s.active {
   color: gold;
 }

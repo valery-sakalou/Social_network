@@ -3,7 +3,7 @@ import Header from './Components/Header/Header';
 import Profile from './Components/Profile/Profile';
 import NavBar from './Components/Nav/NavBar';
 import Dialogs from './Components/Dialogs/Dialogs';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route  } from 'react-router-dom';
 
 const App =(props)=> {
   return (
@@ -13,8 +13,8 @@ const App =(props)=> {
               <NavBar />
          <div className='app-wrapper-content'>
              <Routes>
-                 <Route path='/profile' element={<Profile/>}/>
-                 <Route path='/dialog' element={<Dialogs/>}/>
+                <Route path='/dialogs/*' element={<Dialogs/>}/>
+                <Route path='/profile' element={<Profile/>}/>
              </Routes>
          </div>
         </div>
