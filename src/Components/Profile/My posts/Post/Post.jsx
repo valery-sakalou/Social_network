@@ -7,7 +7,7 @@ const Post = (props) =>{
       <img src="https://www.pinclipart.com/picdir/middle/49-490443_avatar-icon-tlcharger-avatar-icon-clipart.png" />
       {props.message}
       <div>
-        <span>Like </span>{props.like}
+        <span>Like </span>{props.likesCount}
       </div>
     </div>
   </div>
