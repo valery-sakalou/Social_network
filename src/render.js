@@ -9,12 +9,14 @@ import { BrowserRouter } from 'react-router-dom';
 
 //addPost('ddd');
 
-ReactDOM.render(
-     //<BrowserRouter>
-        <App state={state} addPost={addPost}/>
-     //</BrowserRouter>
-    ,document.getElementById('root')
+export let rerenderEntireTree = () => {
 
-    );
+ReactDOM.render(
+     <BrowserRouter>
+        <App state={state} addPost={addPost}/>
+     </BrowserRouter>,
+      document.getElementById('root'));
+}
+rerenderEntireTree();
 
 reportWebVitals();

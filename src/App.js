@@ -25,8 +25,10 @@ const App =(props)=> {
                 <Route path='profile' element={<Profile/>}/>  */}
 
                 {/*Так пишем в 6-м Реакте!!! element и т.д. */}
-                <Route path="/profile" element={<Profile posts={props.posts} />} />
-                <Route path="/dialogs/" element={<Dialogs dialogs={props.dialogs} messages={props.messages} />} />
+                <Route path="/profile"
+                element={<Profile state={props.state.profilePage}
+                addPost={props.addPost} />} />
+                <Route path="/dialogs" element={<Dialogs state={props.state.dialogsPage} />} />
 
              </Routes>
          </div>

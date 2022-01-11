@@ -1,3 +1,4 @@
+import state from '../../Redux/state';
 import MyPosts from './My posts/MyPosts';
 import s from './Profile.module.css';
 import ProfileInfo from './ProfileInfo/Profilenfo';
@@ -19,8 +20,8 @@ import ProfileInfo from './ProfileInfo/Profilenfo';
 
 const Profile = (props) =>{
   return <div className={s.content}>
-    <ProfileInfo dialogs={props.dialogs} messages={props.messages}/>
-    <MyPosts posts={props.posts}/>
+    <ProfileInfo />
+    <MyPosts posts={props.state.posts} addPost={state.addPost}/>
 </div>
 }
 
