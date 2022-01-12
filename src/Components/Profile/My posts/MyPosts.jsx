@@ -11,7 +11,8 @@ const MyPosts = (props) =>{
     let newPostElement = React.createRef();
     let addPost = ()=> {
       let text=newPostElement.current.value;
-      alert(text);  
+      props.addPost(text);
+      newPostElement.current.value=''; //зануляем строку поста после добавления нового поста
     };
 
     return (

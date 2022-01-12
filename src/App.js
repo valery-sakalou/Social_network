@@ -20,16 +20,16 @@ const App =(props)=> {
               <NavBar />
          <div className='app-wrapper-content'>
              <Routes>
-                {/*в 6-м Реакте пишем слово element и т.д. */}
-                {/* <Route path='dialogs' element={<Dialogs/>}/> 
-                <Route path='profile' element={<Profile/>}/>  */}
-
-                {/*Так пишем в 6-м Реакте!!! element и т.д. */}
+                {/* в 6-м Реакте пишем слово element и т.д.
+                 <Route path='dialogs' element={<Dialogs/>}/> 
+                <Route path='profile' element={<Profile/>}/>  
+                Так пишем в 6-м Реакте!!! element и т.д.  */}
+                <Route path="/dialogs"
+                  element={<Dialogs state={props.state.dialogsPage} />} />
                 <Route path="/profile"
-                element={<Profile state={props.state.profilePage}
-                addPost={props.addPost} />} />
-                <Route path="/dialogs" element={<Dialogs state={props.state.dialogsPage} />} />
-
+                  element={<Profile state={props.state.profilePage}
+                  addPost={props.addPost} />} />
+            
              </Routes>
          </div>
         </div>
