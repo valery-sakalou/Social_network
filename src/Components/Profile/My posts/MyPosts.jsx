@@ -14,13 +14,18 @@ const MyPosts = (props) =>{
       props.addPost(text);
       newPostElement.current.value=''; //зануляем строку поста после добавления нового поста
     };
+    let onPostChange = ()=>{
+      let text=newPostElement.current.value;
+      console.log(text);
+
+    }
 
     return (
     <div className={s.postsBlock}>
       <h3>My posts</h3>
       <div>
         <div>
-          <textarea ref={newPostElement}></textarea>
+          { <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/> }
         </div>
         <div>
           <button onClick={addPost}>Add post</button>

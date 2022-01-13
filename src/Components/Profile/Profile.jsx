@@ -21,7 +21,9 @@ import ProfileInfo from './ProfileInfo/Profilenfo';
 const Profile = (props) =>{
   return <div className={s.content}>
     <ProfileInfo />
-    <MyPosts posts={props.state.posts} addPost={props.addPost}/>
+    <MyPosts posts={props.profilePage.posts}
+             NewPostText={props.profilePage.NewPostText}
+             addPost={props.addPost}/>
 </div>
 }
 
